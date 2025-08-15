@@ -13,6 +13,19 @@ jobs:
     if: github.actor != 'github-classroom[bot]'
     steps:
 
+      - name: debug
+        shell: bash
+        run: |
+          echo "ls"
+          ls -la
+          echo "pwd"
+          pwd
+          echo "mkdir"
+          mkdir -p "$HOME/workdir"
+          chmod 777 "$HOME/workdir"
+          echo "ls"
+          ls -la "$HOME"
+
       - name: Checkout code
         uses: actions/checkout@v4
 
