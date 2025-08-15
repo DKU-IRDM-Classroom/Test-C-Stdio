@@ -1,0 +1,26 @@
+name: Autograde
+on:
+  - push
+  - workflow_dispatch
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Autograding
+        uses: DKU-IRDM-Teaching/stdio-grader-action@v1
+        with:
+          time-limit: 1
+          memory-limit: 256m
+          grader-repo: Test-Classroom-Test-Assignment-C-grader
+          teaching-token: ${{ secrets.TEACHING_ACCESS_TOKEN }}
