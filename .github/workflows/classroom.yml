@@ -1,7 +1,6 @@
 name: Autograde
 on:
   - push
-  - workflow_dispatch
 
 permissions:
   checks: write
