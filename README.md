@@ -1,4 +1,4 @@
-# Sandbox / Assignment C
+# Test / C Stdio
 
 ## 문제
 
