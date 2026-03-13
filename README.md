@@ -1,4 +1,4 @@
-# Test Classroom / Test Assignment C
+# Sandbox / Assignment C
 
 ## 문제
 
